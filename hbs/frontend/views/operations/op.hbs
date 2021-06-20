@@ -1,0 +1,28 @@
+{{>header}}
+<h6>my Account</h6>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Amount</th>
+      <th scope="col">Date</th>
+      <th scope="col">Location</th>
+      <th scope="col">show</th>
+      <th scope="col">edit</th>
+      <th scope="col">delete</th>
+    </tr>
+  </thead>
+  <tbody>
+     {{#each user}}
+    <tr>
+      <td>{{this.amount}} </td>
+      <td>{{this.date}} </td>
+      <td>{{this.location}} </td>
+      <td><a href="/single/{{this._id}}">single</a></td>
+      <td><a href="/edit/{{this._id}}">Edit</a></td>
+      <td><a href="/delete/{{this._id}}">delete</a></td>
+    </tr>
+     {{/each}}
+  </tbody>
+</table>
+<button type="submit" class="btn btn-primary" href="/addNewOp">add new operation</button>
+{{>footer}}

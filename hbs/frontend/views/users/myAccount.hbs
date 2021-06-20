@@ -1,0 +1,29 @@
+{{>header}}
+<h6>my Account</h6>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">password</th>
+      <th scope="col">show</th>
+      <th scope="col">edit</th>
+      <th scope="col">delete</th>
+      <th scope="col">do operation</th>
+    </tr>
+  </thead>
+  <tbody>
+     {{#each user}}
+    <tr>
+      <td>{{this._id}}</td>
+      <td>{{this.name}} </td>
+      <td>{{this.password}} </td>
+      <td><a href="/single/{{this._id}}">single</a></td>
+      <td><a href="/edit/{{this._id}}">Edit</a></td>
+      <td><a href="/delete/{{this._id}}">delete</a></td>
+      <td><a href="/op/{{this._id}}">op page</a></td>
+    </tr>
+     {{/each}}
+  </tbody>
+</table>
+{{>footer}}
