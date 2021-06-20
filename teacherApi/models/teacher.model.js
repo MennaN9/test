@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const validator = require('validator')
+//const validator = require('validator')
 
 const Teacher = mongoose.model('Teacher', {
     name:{
