@@ -12,6 +12,10 @@ const Teacher = mongoose.model('Teacher', {
     salary:{
         type:Number,
         required:true,
+        max:[5000,'max salary must be 5000'],
+        validate(value){
+            if(value<0) throw new Error('salary must be positive number')
+        }
     },
     createdAt:{
         type:Date,
